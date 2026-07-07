@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightPath | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Page-specific embedded CSS (Home Page only) -->
+    <style>
+        /* Home-page-only: lift a content card on hover */
+        .cards-grid .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cards-grid .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 24px rgba(11, 37, 69, 0.18);
+        }
+
+        /* Home-page-only: fade-and-rise entrance animation for the hero content */
+        @keyframes heroRise {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .hero-inner {
+            animation: heroRise 0.7s ease both;
+        }
+
+        /* Home-page-only: shrink the hero headline on narrow screens */
+        @media (max-width: 640px) {
+            .hero-banner h1 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- DO NOT MODIFY: header, nav, and footer structure below -->
+    <header>
+        <div class="logo">
+            <a href="home.html" class="logo-mark">
+                <img src="images/BrightPathlogo.png" alt="BrightPath Logo">
+            </a>
+            <a href="home.html" class="logo-text">
+                <span class="logo-name">Bright Path</span>
+                <span class="logo-tagline">Learn &middot; Grow &middot; Succeed</span>
+            </a>
+        </div>
+
+        <nav>
+            <a href="home.html" class="active">Home</a>
+            <a href="ais.html">Action Simulation</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="profile.html">Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team</a>
+            <a href="sitemap.html">Site Map</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-banner">
+            <div class="hero-inner">
+                <span class="eyebrow-plain hero-badge">UN SDG 4 &middot; Quality Education</span>
+                <h1>A good education shouldn&rsquo;t <span class="accent">depend on luck</span>.</h1>
+                <p class="hero-lede">244 million children are out of school worldwide. BrightPath is four students
+                    turning awareness into action &mdash; tutoring, sharing resources, and opening doors in our own
+                    communities.</p>
+                <div class="hero-actions">
+                    <a href="ais.html" class="btn btn-solid">See what you could change &rarr;</a>
+                    <a href="gallery.html" class="btn btn-outline">Explore the gallery</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div><strong>244M</strong><span>children out of school</span></div>
+                <div><strong>6</strong><span>student-led actions</span></div>
+                <div><strong>2030</strong><span>our target year</span></div>
+            </div>
+        </section>
+
+        <div class="cards-grid">
+            <article class="card">
+                <div class="card-photo">
+                    <img src="images/card1-library-reading.jpg" alt="Students reading together in a public library">
+                    <span class="card-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="card-content">
+                    <h3>Education Is the Foundation for Change</h3>
+                    <p>Millions of students worldwide still lack access to consistent, quality learning — a gap that
+                        widens every year school is disrupted. BrightPath exists to turn that awareness into action.</p>
+                    <ul class="check-list">
+                        <li>Share study resources with peers who lack them</li>
+                        <li>Volunteer as a peer tutor</li>
+                        <li>Support digital-access initiatives on campus</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-photo">
+                    <img src="images/card2-mentoring.jpg"
+                        alt="Volunteers teaching children as part of a community learning programme">
+                    <span class="card-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                            <path
+                                d="M12 21s-6.7-4.35-9.3-8.28C.86 10 1.6 6.14 4.86 4.86 7 4 9 4.6 12 7.5c3-2.9 5-3.5 7.14-2.64 3.26 1.28 4 5.14 2.16 7.86C18.7 16.65 12 21 12 21z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="card-content">
+                    <h3>Small Actions, Real Impact</h3>
+                    <p>You don't need to wait until graduation to contribute to SDG 4. Everyday choices — from mentoring
+                        a younger student to donating old textbooks — compound into meaningful change within your own
+                        community.</p>
+                    <ul class="check-list">
+                        <li>Mentor a first-year student</li>
+                        <li>Donate unused textbooks and supplies</li>
+                        <li>Join or start a study support group</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-photo">
+                    <img src="images/card3-graduation.jpg" alt="University students celebrating their graduation">
+                    <span class="card-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                            <path
+                                d="M12 2l2.9 6.26L22 9.27l-5 4.87L18.2 21 12 17.77 5.8 21 7 14.14l-5-4.87 7.1-1.01z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="card-content">
+                    <h3>Imagine the Outcome</h3>
+                    <p>If even a fraction of students at Westminster took one of these actions this year, the ripple
+                        effect on local access to education would be significant — measured in confidence gained,
+                        dropouts prevented, and skills passed on.</p>
+                    <ul class="check-list">
+                        <li>Higher retention among supported students</li>
+                        <li>Stronger peer networks</li>
+                        <li>A culture where knowledge-sharing is normal, not exceptional</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+
+        <section id="focus-areas">
+            <span class="eyebrow-plain">Explore Our Work</span>
+            <h2>Four focus areas, four student stories</h2>
+            <div class="focus-list">
+                <a href="content_ST1.html" class="focus-item">
+                    <span class="focus-num">01</span>
+                    <span class="focus-text">
+                        <span class="focus-title">Access to Learning Resources</span>
+                        <span class="focus-desc">Reaching learners left behind</span>
+                    </span>
+                    <span class="focus-arrow">&rarr;</span>
+                </a>
+                <a href="content_ST2.html" class="focus-item">
+                    <span class="focus-num">02</span>
+                    <span class="focus-text">
+                        <span class="focus-title">Bridging the Digital Divide</span>
+                        <span class="focus-desc">Devices, data &amp; open tools</span>
+                    </span>
+                    <span class="focus-arrow">&rarr;</span>
+                </a>
+                <a href="content_ST3.html" class="focus-item">
+                    <span class="focus-num">03</span>
+                    <span class="focus-text">
+                        <span class="focus-title">Community Learning Programs</span>
+                        <span class="focus-desc">Neighbours teaching neighbours</span>
+                    </span>
+                    <span class="focus-arrow">&rarr;</span>
+                </a>
+                <a href="content_ST4.html" class="focus-item">
+                    <span class="focus-num">04</span>
+                    <span class="focus-text">
+                        <span class="focus-title">Lifelong Skills for the Future</span>
+                        <span class="focus-desc">Learning beyond the classroom</span>
+                    </span>
+                    <span class="focus-arrow">&rarr;</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-col footer-brand">
+                <div class="logo">
+                    <a href="home.html" class="logo-mark">
+                        <img src="images/BrightPathlogo.png" alt="BrightPath Logo">
+                    </a>
+                    <a href="home.html" class="logo-text">
+                        <span class="logo-name">Bright Path</span>
+                        <span class="logo-tagline">Learn &middot; Grow &middot; Succeed</span>
+                    </a>
+                </div>
+                <p>A student-led website for UN SDG 4 &mdash; Quality Education.</p>
+            </div>
+            <div class="footer-col">
+                <span class="footer-heading">Pages</span>
+                <a href="home.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="ais.html">Action Simulator</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="team.html">Team</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-heading">Page Owner</span>
+                <a href="pageEditor_ST1.html">Page Editor</a>
+                <a href="validation_ST1.html">Validation Page</a>
+                <a href="#">Accessibility / Compliance</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-heading">Student</span>
+                <p>Heshan Kavinda</p>
+                <p>Student 1 &middot; ID 20251117</p>
+                <p>Template &middot; Home &middot; Gallery</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Bright Path &middot; University of Westminster group coursework</span>
+            <span>Compliant with JANET regulations</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
