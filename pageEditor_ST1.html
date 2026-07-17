@@ -50,7 +50,7 @@
     <section id="completed-tasks" class="editor-section">
         <h2>Completed Pages / Tasks</h2>
         <ul>
-            <li>Shared HTML template, navigation bar, and Global CSS (<code>template.html</code>, <code>style.css</code>)</li>
+            <li>Shared HTML template, navigation bar, and Global CSS (<code>template.html</code>, <code>style.css</code>, <code>css/global.css</code>, <code>css/navbar.css</code>, <code>css/footer.css</code>, <code>js/navbar.js</code>)</li>
             <li>Home Page (<code>home.html</code>)</li>
             <li>Gallery Page, including its external page-specific stylesheet and script (<code>gallery.html</code>, <code>css/gallery.css</code>, <code>js/gallery.js</code>)</li>
             <li>Content Page &mdash; "Access to Learning Resources" (<code>content_ST1.html</code>)</li>
@@ -78,12 +78,26 @@
             <code>flex: 1</code> on each group and <code>flex: 0 0 auto</code> on the logo, plus a prominent
             <code>.nav-cta</code> button at the far right. This structure was inspired by a real-world
             navigation pattern (a two-tier bar with a centred logo and a call-to-action button), adapted with
-            BrightPath's own page groupings and wording rather than copied. On narrow screens, a media query
-            switches <code>.main-nav</code> to <code>flex-direction: column</code> so the groups stack and
-            centre instead of overlapping. Navigation links use an underline-on-hover style with a
-            <code>.active</code> class each student applies to their own page's link. The footer uses a
+            BrightPath's own page groupings and wording rather than copied. <code>&lt;header&gt;</code> itself
+            uses <code>position: sticky; top: 0;</code> so it stays reachable while scrolling; JavaScript
+            (<code>js/navbar.js</code>) adds a <code>.header-scrolled</code> class once the user scrolls past a
+            threshold, which the CSS uses to animate the utility bar closed and add a drop shadow &mdash; with
+            two different thresholds for entering/exiting that state (not one) specifically to stop a feedback
+            loop where the utility bar's own height change nudges the scroll position back across a single
+            shared line, causing it to flicker open and shut. Navigation links use an underline-on-hover style
+            with a <code>.active</code> class each student applies to their own page's link. The footer uses a
             responsive grid (<code>repeat(auto-fit, minmax(...))</code>) so its four columns collapse cleanly on
             narrow screens without a media query.
+        </p>
+        <p>
+            On narrow screens the nav links and CTA collapse behind a hamburger toggle button rather than
+            stacking open by default &mdash; an earlier version stacked every nav group as its own full-width
+            block, which pushed all real page content off-screen on a phone. <code>js/navbar.js</code> toggles
+            a <code>.nav-open</code> class on <code>.main-nav</code> when the button is clicked, and the CSS
+            uses explicit <code>order</code> values so the logo and toggle button always stay together on the
+            first row regardless of whether the menu is open (without this, the toggle button &mdash; last in
+            the HTML source &mdash; rendered after the opened menu content, ending up at the bottom of the
+            screen instead of staying next to the logo where it's easy to find and close again).
         </p>
         <h3>Design Rationale</h3>
         <p>
