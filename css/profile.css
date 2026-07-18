@@ -1,8 +1,5 @@
 /* User Profile Page (Student 4) */
 
-/* Three-card "how it works" strip, reusing the shared .cards-grid/.card
-   components from global.css so it stays visually consistent with the rest
-   of the site, rather than introducing a one-off layout. */
 .profile-steps-overview {
     margin: 1.6rem 0 2rem;
     gap: 1.4rem;
@@ -40,7 +37,6 @@
     font-size: 0.95rem;
 }
 
-/* Wraps the controls / progress / step-buttons as one visually distinct panel */
 .profile-panel {
     background: white;
     border: 1px solid var(--border-color);
