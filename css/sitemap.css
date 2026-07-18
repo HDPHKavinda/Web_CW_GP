@@ -128,7 +128,6 @@
     font-size: 12px;
 }
 
-/* Hover feedback on the whole clickable node */
 .site-node {
     cursor: pointer;
 }
