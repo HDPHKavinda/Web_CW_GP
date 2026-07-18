@@ -52,7 +52,6 @@
     font-family: 'Inter', Arial, sans-serif;
 }
 
-/* Plain-text fallback list of every page, for quick scanning, small screens, and screen-reader users */
 .sitemap-quicklinks {
     display: flex;
     flex-wrap: wrap;
