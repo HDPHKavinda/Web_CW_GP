@@ -22,8 +22,8 @@
     </div>
 
     <div class="student-card">
-        <div><strong>Name</strong>[Student 4 Name]</div>
-        <div><strong>Student ID</strong>[Student ID]</div>
+        <div><strong>Name</strong>Heshani Dinethya</div>
+        <div><strong>Student ID</strong>W2212756</div>
         <div><strong>Role</strong>User Profile, Sitemap</div>
         <div><strong>Group Website</strong>BrightPath &mdash; SDG 4, Quality Education</div>
     </div>
@@ -44,7 +44,7 @@
         </ol>
     </nav>
 
-    <section id="completed-tasks" class="editor-section">
+     <section id="completed-tasks" class="editor-section">
         <h2>Completed Pages / Tasks</h2>
         <ul>
             <li>User Profile (<code>profile.html</code>, <code>css/profile.css</code>, <code>js/profile.js</code>)</li>
@@ -58,7 +58,7 @@
         <h2>User Profile</h2>
         <h3>HTML Structure</h3>
         <p>
-            No HTML form at all, per the spec &mdash; instead, a control area (Start/Continue, Reset, and three
+            No HTML form at all, per the spec instead, a control area (Start/Continue, Reset, and three
             "revisit step" buttons), a progress bar, and an empty <code>&lt;div id="profileOutput"&gt;</code>
             that JavaScript populates as the user answers prompts.
         </p>
@@ -79,7 +79,7 @@
             (DOM manipulation, not <code>innerHTML</code> string-building, for the actual field values) every
             time it's called, and <code>updateProgress()</code> recalculates the percentage from how many
             non-null answers exist. Any step can be revisited via its button at any time, which lets a user go
-            back and fill in something they skipped earlier &mdash; both the profile output and the progress bar
+            back and fill in something they skipped earlier both the profile output and the progress bar
             update immediately.
         </p>
         <p><a href="profile.html" target="_blank" rel="noopener">Open the live User Profile Page &rarr;</a> &middot;
@@ -116,13 +116,18 @@
         <h2>Content Page &mdash; "Lifelong Skills for the Future"</h2>
         <h3>HTML Structure</h3>
         <p>
-            One <code>&lt;h1&gt;</code> and four <code>&lt;h2&gt;</code> sections, linked from a simple top
-            navigation list, using the same shared <code>css/content.css</code> as Students 2 and 3.
+            One <code>&lt;h1&gt;</code> and five <code>&lt;h2&gt;</code> sections, linked from a simple top
+            navigation list, built on the same shared <code>css/content.css</code> as Students 2 and 3, plus a
+            small page-scoped <code>css/content_ST4.css</code> for the pull-stat callout, image captions, and
+            photo-credit line that are specific to this page.
         </p>
         <h3>Design Rationale</h3>
         <p>
             Focuses on the skills a fixed curriculum doesn't teach directly, connecting to the Home Page's
-            fourth focus-area card.
+            fourth focus-area card. A fifth section ("The Real Barrier") was added between the problem and the
+            solutions to address <em>why</em> students don't already use the opportunities that exist
+            awareness and confidence, not ability before moving on to what a reader can actually do
+            about it.
         </p>
         <p><a href="content_ST4.html" target="_blank" rel="noopener">Open the live Content Page &rarr;</a> &middot;
             <a href="validation_ST4.html#content">See its validation evidence &rarr;</a></p>
@@ -144,17 +149,20 @@
 
     <section id="challenges" class="editor-section">
         <h2>Challenges &amp; Lessons Learned</h2>
-        <div class="dummy-block">
-            <span class="dummy-flag">Placeholder &mdash; rewrite in your own words</span>
-            <ul>
-                <li>Working out how to represent "skipped" prompts clearly in both the profile output and the
-                    progress percentage, instead of just ignoring them silently.</li>
-                <li>Positioning 12 SVG nodes and their connecting lines by hand so the diagram stayed readable
-                    without overlapping labels.</li>
-                <li>Making sure the SVG sitemap was still fully keyboard-navigable, not just clickable with a
-                    mouse.</li>
-            </ul>
-        </div>
+        <ul>
+            <li>Deciding how to show a "skipped" prompt took a bit of thinking I didn't want it to read
+                like an error, so a skipped answer shows up as an italic "Skipped" label in the profile output
+                rather than being left blank or hidden entirely.</li>
+            <li>Positioning all 12 nodes and their connecting lines in the sitemap's SVG by hand took a fair
+                amount of trial and error to stop the labels overlapping, especially once the four content-page
+                nodes went on their own row underneath the six main pages.</li>
+            <li>Making sure the sitemap was genuinely usable with just a keyboard, not only a mouse, meant
+                actually testing the tab order rather than assuming SVG <code>&lt;a&gt;</code> links would
+                behave exactly like normal HTML links.</li>
+            <li>When I went back to expand the Content Page, the balance was making it feel complete without
+                turning it into a full magazine-style layout like Student 1's it still needed to share
+                the same simpler template as Students 2 and 3, just with a bit more depth.</li>
+        </ul>
     </section>
 
     <section id="accessibility" class="editor-section">
@@ -171,14 +179,19 @@
 
     <section id="janet" class="editor-section">
         <h2>Compliance with JANET Regulations</h2>
-        <div class="dummy-block">
-            <span class="dummy-flag">Draft &mdash; check wording against your module handbook</span>
-            <p>
-                The User Profile page collects information only into browser memory via
-                <code>prompt()</code> &mdash; nothing is transmitted, stored server-side, or shared, so there is
-                no personal-data handling concern. All content is original.
-            </p>
-        </div>
+        <p>
+            The User Profile page only ever holds information in browser memory via <code>prompt()</code>
+            calls nothing is transmitted, logged, or stored server-side, and refreshing the page clears
+            it completely. That means there's no personal-data handling risk to manage for this feature, in
+            keeping with JANET's acceptable-use expectations around not introducing unnecessary data-collection
+            or security exposure.
+        </p>
+        <p>
+            All content across my pages is either original or properly licensed: the Content Page photography
+            is sourced from Pexels under its free-to-use licence, and the "Poppins"/"Inter" typefaces are used
+            under the SIL Open Font Licence (both credited in the References section below). No third-party
+            copyrighted material is reproduced without permission.
+        </p>
     </section>
 
     <section id="meetings" class="editor-section">
