@@ -1,13 +1,3 @@
-/* ==========================================================================
-   NAVBAR.CSS — BrightPath's original two-tier navigation
-   (Structure inspired by a real-world layout pattern: thin utility bar +
-   a centered-logo main nav row with a CTA button. Content, wording, and
-   styling below are BrightPath's own — not copied from that reference.)
-   ========================================================================== */
-
-/* Header stays pinned to the top of the viewport while scrolling, with a
-   shadow that fades in once it's actually stuck to something (JS toggles
-   .header-scrolled on <header> based on scroll position — see js/navbar.js) */
 header {
     background-color: var(--primary-color);
     position: sticky;
@@ -20,9 +10,7 @@ header.header-scrolled {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
-/* Thin top utility bar — visible only at the very top of the page.
-   Once the page scrolls, JS adds .header-scrolled and this collapses away
-   with an animated transition rather than disappearing instantly. */
+/* Thin top utility bar*/
 .utility-bar {
     background-color: var(--secondary-color);
     color: var(--border-color);
@@ -51,10 +39,7 @@ header.header-scrolled .utility-bar {
     padding-bottom: 0;
 }
 
-/* Main nav row — this is the part that "always stays": since <header> is
-   sticky, this row remains visible and pinned once the utility bar above it
-   collapses away, with a slightly tighter padding once scrolled for a subtle
-   animated "settle into place" feel. */
+/* Main nav row */
 .main-nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -146,7 +131,7 @@ header.header-scrolled .logo-mark {
     font-weight: 600;
 }
 
-/* CTA button on the far right of the nav row */
+/* CTA button take action*/
 .nav-cta {
     flex: 0 0 auto;
     font-size: 0.85rem;
@@ -160,7 +145,7 @@ header.header-scrolled .logo-mark {
     transform: translateY(-2px);
 }
 
-/* Hamburger toggle button — hidden on desktop, shown only on narrow screens */
+/* Hamburger toggle button for mobile*/
 .nav-toggle {
     display: none;
     flex-direction: column;

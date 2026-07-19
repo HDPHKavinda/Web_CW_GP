@@ -1,11 +1,7 @@
-/* ==========================================================================
-   GLOBAL.CSS — BrightPath shared design tokens + components
-   Part of the site's Global CSS (imported by the root style.css).
-   Do NOT add page-specific rules here — see /css/<page>.css instead.
-   ========================================================================== */
+/* Do NOT add page-specific rules here — see /css/<page>.css instead. */
 
 :root {
-    /* BrightPath Education palette */
+    /* color palette  meetika hariyata balala daaganna*/
     --primary-color: #123A7A;   /* Primary Dark Blue — trust, stability */
     --secondary-color: #1E293B; /* Text Dark — headings, strong readability */
     --accent-color: #38BDF8;    /* Accent Sky Blue — creativity, highlights */
@@ -45,7 +41,7 @@ h1, h2, h3 {
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; }
 
-/* Eyebrow label (small caps heading above a section title) */
+/* Eyebrow label small cap up to the topics*/
 .eyebrow-plain {
     display: block;
     font-family: 'Poppins', Arial, sans-serif;
@@ -94,7 +90,7 @@ h2 { font-size: 1.5rem; }
     transform: translateY(-2px);
 }
 
-/* Card styles (shared component, required in Global CSS) */
+/* Card styles*/
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -148,7 +144,7 @@ h2 { font-size: 1.5rem; }
     margin-bottom: 0.3rem;
 }
 
-/* Checklist variant (checkmark instead of a plain bullet) */
+/* Checklist*/
 .card-content ul.check-list {
     list-style: none;
     padding-left: 0;

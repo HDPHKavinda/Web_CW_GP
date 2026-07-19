@@ -48,6 +48,23 @@
             background: var(--accent-color); color: white; transform: translateY(-3px);
         }
 
+        /* Narrow screens: flex-wrap centres each row independently, which produces a
+           ragged, unevenly-shaped block when 6 pills of different text lengths wrap
+           across 3 rows. A fixed 2-column grid keeps every pill the same width and
+           every row aligned, instead of a staggered shape. */
+        @media (max-width: 560px) {
+            .internal-nav ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.7rem;
+            }
+            .internal-nav a {
+                padding: 0.7rem 0.5rem;
+                text-align: center;
+                font-size: 0.85rem;
+            }
+        }
+
         .section-modern {
             background: white;
             border-radius: 20px;
