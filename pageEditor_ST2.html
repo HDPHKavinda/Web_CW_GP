@@ -22,8 +22,8 @@
     </div>
 
     <div class="student-card">
-        <div><strong>Name</strong>[Student 2 Name]</div>
-        <div><strong>Student ID</strong>[Student ID]</div>
+        <div><strong>Name</strong>Nidarsha Liyanaarachchi</div>
+        <div><strong>Student ID</strong>20240400</div>
         <div><strong>Role</strong>Splash Screen, Action Impact Simulator</div>
         <div><strong>Group Website</strong>BrightPath &mdash; SDG 4, Quality Education</div>
     </div>
@@ -78,7 +78,7 @@
             (cancelling the automatic redirect) before its own link takes the user to the Home Page immediately.
         </p>
         <p><a href="splash.html" target="_blank" rel="noopener">Open the live Splash Screen &rarr;</a> &middot;
-            <a href="validation_ST2.html#splash">See its validation evidence &rarr;</a></p>
+            <a href="validation_ST2.html#splash-screen">See its validation evidence &rarr;</a></p>
     </section>
 
     <section id="ais-page" class="editor-section">
@@ -107,21 +107,25 @@
             the spec.
         </p>
         <p><a href="ais.html" target="_blank" rel="noopener">Open the live Action Impact Simulator &rarr;</a> &middot;
-            <a href="validation_ST2.html#ais">See its validation evidence &rarr;</a></p>
+            <a href="validation_ST2.html#action-simulator">See its validation evidence &rarr;</a></p>
     </section>
 
     <section id="content-page" class="editor-section">
         <h2>Content Page &mdash; "Bridging the Digital Divide"</h2>
         <h3>HTML Structure</h3>
         <p>
-            One <code>&lt;h1&gt;</code> and four <code>&lt;h2&gt;</code> sections, each with a unique
-            <code>id</code>, linked from a simple top navigation list via anchor links.
+            One <code>&lt;h1&gt;</code> hero, a pill-style jump-nav, and six <code>&lt;section&gt;</code>
+            elements with unique <code>id</code>s: four alternating image/text "story blocks", a centred
+            statement-quote, an action-tile grid, and a closing outcome section.
         </p>
         <h3>CSS Techniques</h3>
         <p>
-            Uses the shared <code>css/content.css</code> file (also used by Students 3 and 4's content pages)
-            rather than page-specific embedded CSS, since this page's layout is a straightforward single column
-            and didn't need bespoke styling. The "Go to Top" button is plain HTML/CSS, no JavaScript.
+            Uses page-specific embedded <code>&lt;style&gt;</code> CSS (allowed by the spec as an alternative to
+            an external stylesheet) rather than the shared <code>css/content.css</code> file used by Students 3
+            and 4's content pages, since this page needed its own layout: alternating "zigzag" story blocks
+            (image left/text right, then reversed on the next block via a <code>.cp-block-reverse</code>
+            modifier) with large numbered labels behind each image, instead of a sticky sidebar. The "Go to
+            Top" button is a fixed circular icon button, plain HTML/CSS, no JavaScript.
         </p>
         <h3>Design Rationale</h3>
         <p>
@@ -129,7 +133,7 @@
             connectivity access, distinct from Student 1's content page on the exam-to-employment skills gap.
         </p>
         <p><a href="content_ST2.html" target="_blank" rel="noopener">Open the live Content Page &rarr;</a> &middot;
-            <a href="validation_ST2.html#content">See its validation evidence &rarr;</a></p>
+            <a href="validation_ST2.html#content-page">See its validation evidence &rarr;</a></p>
     </section>
 
     <section id="links-validation" class="editor-section">
@@ -139,9 +143,9 @@
                 <tr><th>Page</th><th>Live Page</th><th>Validation Evidence</th></tr>
             </thead>
             <tbody>
-                <tr><td>Splash Screen</td><td><a href="splash.html" target="_blank" rel="noopener">splash.html</a></td><td><a href="validation_ST2.html#splash">Validation &rarr;</a></td></tr>
-                <tr><td>Action Impact Simulator</td><td><a href="ais.html" target="_blank" rel="noopener">ais.html</a></td><td><a href="validation_ST2.html#ais">Validation &rarr;</a></td></tr>
-                <tr><td>Content Page</td><td><a href="content_ST2.html" target="_blank" rel="noopener">content_ST2.html</a></td><td><a href="validation_ST2.html#content">Validation &rarr;</a></td></tr>
+                <tr><td>Splash Screen</td><td><a href="splash.html" target="_blank" rel="noopener">splash.html</a></td><td><a href="validation_ST2.html#splash-screen">Validation &rarr;</a></td></tr>
+                <tr><td>Action Impact Simulator</td><td><a href="ais.html" target="_blank" rel="noopener">ais.html</a></td><td><a href="validation_ST2.html#action-simulator">Validation &rarr;</a></td></tr>
+                <tr><td>Content Page</td><td><a href="content_ST2.html" target="_blank" rel="noopener">content_ST2.html</a></td><td><a href="validation_ST2.html#content-page">Validation &rarr;</a></td></tr>
             </tbody>
         </table>
     </section>
@@ -211,7 +215,8 @@
     <section id="references" class="editor-section">
         <h2>References</h2>
         <ul>
-            <li>Pexels contributors (various), Splash/AIS/Content Page photographs, Pexels, used under the Pexels licence.</li>
+            <li>Pexels contributors (various), Splash Screen and Action Impact Simulator photographs, Pexels, used under the Pexels licence.</li>
+            <li>Google Gemini (AI image generation), the four Content Page images, generated for this page and do not depict real people, places, or events.</li>
             <li>Google Fonts, "Poppins" and "Inter" typefaces, used under the SIL Open Font Licence.</li>
             <li>Mozilla Developer Network (MDN Web Docs), referenced for <code>setInterval</code>, meta refresh behaviour, and CSS keyframe animation syntax.</li>
         </ul>

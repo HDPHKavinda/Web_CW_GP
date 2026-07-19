@@ -56,6 +56,29 @@ footer a:hover {
     font-size: 0.78rem;
     color: rgba(255, 255, 255, 0.7);
 }
+.footer-social {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.7rem;
+}
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.12);
+    margin-bottom: 0;
+}
+.footer-social a svg {
+    width: 16px;
+    height: 16px;
+    fill: white;
+}
+.footer-social a:hover {
+    background-color: var(--accent-color);
+}
 @media (max-width: 720px) {
     .footer-main {
         grid-template-columns: 1fr 1fr;
