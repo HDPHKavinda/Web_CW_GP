@@ -1,8 +1,6 @@
-// User Profile Page (Student 4)
-// Builds a profile entirely through JavaScript prompt() calls — no HTML form — and
-// reveals the result progressively using DOM manipulation, per the coursework spec.
+// User Profile Page
 
-// Step/prompt definitions: an array of objects (JS requirement: variables/objects + functions)
+// Step/prompt definitions
 const STEPS = [
     {
         id: 1,
@@ -53,7 +51,7 @@ function runStep(stepId) {
 
     step.fields.forEach(function (field) {
         const response = window.prompt(field.question);
-        // Conditional logic: null (Cancel) or an empty string both count as "skipped"
+        // Conditional logic
         if (response === null || response.trim() === '') {
             answers[field.key] = null;
         } else {
@@ -95,7 +93,7 @@ function updateProgress() {
     progressText.textContent = 'Completion: ' + percent + '% (' + answered + '/' + TOTAL_PROMPTS + ' prompts completed)';
 }
 
-// DOM manipulation: rebuild the visible profile output from profileData each time it changes
+// Rebuilds the visible profile output from profileData
 function renderProfile() {
     const visitedSteps = Object.keys(profileData);
     if (visitedSteps.length === 0) {
@@ -144,7 +142,7 @@ function renderProfile() {
     });
 }
 
-// "Start / Continue": runs the next step that hasn't been visited yet, in order
+// "Start / Continue"
 startBtn.addEventListener('click', function () {
     const nextStep = STEPS.find(function (step) { return !profileData[step.id]; });
     if (nextStep) {

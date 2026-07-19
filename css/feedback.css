@@ -35,8 +35,7 @@
     background: white;
 }
 
-/* Scrollable programme grid: a fixed-height panel with vertical scroll, so the
-   directory can grow without pushing the rest of the page down */
+/* Scrollable programme grid — fixed height, grows without pushing content down */
 .programs-scroll {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));

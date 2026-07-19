@@ -1,6 +1,4 @@
-// Feedback & Program Directory Page (Student 3)
-// Live character counter, custom validation feedback, and a submission confirmation —
-// all JavaScript-driven, not CSS-only, per the coursework spec.
+// Feedback Page — live char counter, validation, confirmation
 
 const messageEl = document.getElementById('message');
 const charCountEl = document.getElementById('charCount');
@@ -54,7 +52,7 @@ form.addEventListener('submit', function (e) {
         return;
     }
 
-    // The form does not need to send data to a server (per spec) — just confirm success.
+    // No server
     confirmationEl.textContent = 'Thank you for your feedback! We’ve received it.';
     form.reset();
     charCountEl.textContent = MAX_CHARS;

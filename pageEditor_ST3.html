@@ -60,8 +60,12 @@
                     Programme Directory, Reviews Summary, and Feedback Form, each wrapped in a semantic
                     &lt;section&gt; with its own id for internal linking. The Programme Directory uses
                     &lt;article class="program-card"&gt; per item (images credited in
-                    <a href="#ref1">reference 1</a>) inside a horizontally-scrollable Flexbox row
-                    (display: flex; overflow-x: auto;). The Reviews section uses
+                    <a href="#ref1">reference 1</a>, except the Peer Tutoring Circle photo, which is credited
+                    in <a href="pageEditor_ST1.html#ref12">reference 12 of the Page Editor &mdash; Student 1</a>)
+                    inside a fixed-height CSS Grid
+                    (display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));)
+                    that scrolls vertically (max-height: 520px; overflow-y: auto;) once the cards
+                    overflow, instead of growing the page. The Reviews section uses
                     &lt;article class="review-card"&gt; per review, laid out with CSS Grid
                     (repeat(auto-fit, minmax(280px, 1fr))). The Feedback Form uses
                     &lt;fieldset&gt;/&lt;legend&gt; for field grouping (<a href="#ref3">reference 3</a>), with
@@ -174,8 +178,8 @@
                     unlawful material is present, in line with JANET's Acceptable Use Policy governing what
                     may be published on JANET-connected networks. External resources are used under their
                     respective free-to-use licences: photographs from Pexels are used under the Pexels Licence
-                    and attributed in References below; Google Fonts ("Poppins" and "Inter") are used under
-                    the SIL Open Font Licence &mdash; respecting the intellectual property rights JANET
+                    and attributed in References below; Google Fonts ("Poppins" and "Inter", <a href="#ref2">reference 2</a>)
+                    are used under the SIL Open Font Licence &mdash; respecting the intellectual property rights JANET
                     requires users to observe. The site does not collect or store any personal data from
                     visitors &mdash; the Feedback form uses client-side validation only, with no server
                     transmission, so there is no unauthorised data-collection risk to manage.</p>
@@ -213,9 +217,9 @@
                 <h2 id="ref">References</h2>
                 <p>References are listed below in a consistent, simplified format.</p>
                 <ul class="ref">
-                    <li id="ref1">Pexels contributors (2026) Feedback/Team/Content Page photographs. Available at: https://www.pexels.com/ (used under the Pexels licence).</li>
-                    <li id="ref2">Google Fonts (2026) "Poppins" and "Inter" typefaces. Available at: https://fonts.google.com/ (used under the SIL Open Font Licence).</li>
-                    <li id="ref3">Mozilla Developer Network (2026) MDN Web Docs, referenced for form validation patterns, fieldset/legend semantics, and the datalist element. Available at: https://developer.mozilla.org/</li>
+                    <li id="ref1">Pexels contributors (2026) Feedback/Team/Content Page photographs. Available at: <a href="https://www.pexels.com/" target="_blank" rel="noopener">https://www.pexels.com/</a> (used under the Pexels licence).</li>
+                    <li id="ref2">Google Fonts (2026) "Poppins" and "Inter" typefaces. Available at: <a href="https://fonts.google.com/" target="_blank" rel="noopener">https://fonts.google.com/</a> (used under the SIL Open Font Licence).</li>
+                    <li id="ref3">Mozilla Developer Network (2026) MDN Web Docs, referenced for form validation patterns, fieldset/legend semantics, and the datalist element. Available at: <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">https://developer.mozilla.org/</a></li>
                 </ul>
             </section>
 

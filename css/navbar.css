@@ -177,16 +177,14 @@ header.header-scrolled .logo-mark {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Narrow screens: collapse the nav links/CTA behind the hamburger toggle instead
-   of stacking everything open by default (which pushed real content off-screen) */
+/* Narrow screens: hide nav links behind the hamburger */
 @media (max-width: 860px) {
     .utility-bar {
         flex-direction: column;
         gap: 0.2rem;
         text-align: center;
         padding: 0.5rem 1rem;
-        /* the base rule's max-height: 40px was sized for one row (desktop); stacked
-           into two lines on mobile, that height clipped the second line off */
+        /* Taller max-height needed here mobile wraps to 2 lines */
         max-height: 70px;
     }
 
@@ -196,10 +194,7 @@ header.header-scrolled .logo-mark {
         padding: 0.7rem 1.2rem;
     }
 
-    /* Explicit order so the logo + toggle stay on the first row no matter what —
-       without this, the toggle button (last in the HTML) ends up rendering
-       AFTER the opened menu, at the very bottom, instead of staying next to
-       the logo where it's easy to find and tap closed again. */
+    /* Keeps logo + toggle on the first row */
     .logo {
         order: 1;
     }
@@ -237,8 +232,7 @@ header.header-scrolled .logo-mark {
         margin: 1rem auto 0;
     }
 
-    /* Opened via JS: .main-nav gets .nav-open, revealing the links below the
-       compact logo/toggle row */
+    /* JS adds .nav-open to reveal the links */
     .main-nav.nav-open .nav-group,
     .main-nav.nav-open .nav-cta {
         display: flex;

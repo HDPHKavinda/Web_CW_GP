@@ -1,6 +1,4 @@
-// SDG Action Impact Simulator (Student 2)
-// Tracks selected action cards, calculates a total impact score, shows a feedback
-// message at one of three impact levels, and swaps the page background to match.
+// SDG Action Impact Simulator
 
 const cards = document.querySelectorAll('.action-card');
 const selectedCountEl = document.getElementById('selectedCount');
@@ -10,7 +8,7 @@ const impactMessageEl = document.getElementById('impactMessage');
 const aisBg = document.getElementById('aisBg');
 const resetBtn = document.getElementById('resetBtn');
 
-// Impact level thresholds — defined here and explained in comments per the coursework spec
+// Impact level thresholds
 const LOW_MAX = 6;      // 1–6 points   = Low impact
 const MEDIUM_MAX = 14;  // 7–14 points  = Medium impact
 // 15+ points = High impact
@@ -18,8 +16,7 @@ const MEDIUM_MAX = 14;  // 7–14 points  = Medium impact
 function toggleCard(card) {
     const isSelected = card.classList.toggle('selected');
     const title = card.querySelector('h3').textContent;
-    // aria-pressed isn't valid here (an <article> containing a heading can't take the
-    // button role), so screen-reader users get the state change via a live aria-label instead.
+    // aria-pressed isn't valid here, so aria-label carries the state instead
     card.setAttribute('aria-label', title + (isSelected ? ', selected' : ', not selected'));
     updateSummary();
 }
@@ -71,8 +68,7 @@ function updateSummary() {
     impactLevelEl.textContent = level;
     impactMessageEl.textContent = message;
 
-    // Background image changes are controlled by JavaScript, not a CSS-only trick —
-    // the level-low/level-medium/level-high classes are defined in this page's embedded CSS.
+    // Background swap is JS-controlled; the level classes live in the embedded CSS
     aisBg.classList.remove('level-medium', 'level-high');
     if (bgClass === 'level-medium' || bgClass === 'level-high') {
         aisBg.classList.add(bgClass);

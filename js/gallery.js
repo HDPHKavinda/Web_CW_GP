@@ -1,6 +1,4 @@
-// Gallery Page interactivity (Student 1)
-// Hover feedback, click-to-expand, and close are all JavaScript-driven — required by the
-// coursework spec, which explicitly disallows CSS-only (:hover) implementations here.
+// Gallery Page interactivity
 
 const thumbs = document.querySelectorAll('.thumb');
 const modal = document.getElementById('galleryModal');
@@ -25,14 +23,14 @@ thumbs.forEach(function (thumb) {
     thumb.addEventListener('click', function () {
         openModal(thumb);
     });
-    // Keyboard accessibility: Enter or Space also opens the extended view
+    // Keyboard accessibility
     thumb.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             openModal(thumb);
         }
     });
-    // Hover interaction handled via JS event listeners (not a CSS :hover rule)
+    // Hover interaction handled
     thumb.addEventListener('mouseenter', function () {
         thumb.classList.add('thumb-hover');
     });
@@ -63,7 +61,7 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// User customisation: colour scheme and font style toggles, scoped to the extended view only
+// User customisation
 document.getElementById('toggleColor').addEventListener('click', function () {
     modalContent.classList.toggle('alt-color');
 });

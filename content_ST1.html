@@ -9,9 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Page-specific embedded CSS (Content Page ST1 only) -->
     <style>
-        /* Content-page-only: magazine layout — sticky sidebar + wide content column */
         .mag-layout {
             display: grid;
             grid-template-columns: 230px 1fr;
@@ -20,7 +18,7 @@
             margin-top: 1.5rem;
         }
 
-        /* Sidebar: section nav + a pinned fact, stays in view while the article scrolls */
+        /* Sidebar */
         .mag-sidebar {
             position: sticky;
             top: 100px;
@@ -100,9 +98,7 @@
             text-align: center;
         }
 
-        /* Pull-quote: a full-width gradient callout in the flow, not a float —
-           floats need body text to wrap around them, and this quote otherwise
-           sits right after a heading with nothing beside it to wrap. */
+        /* Pull-quote */
         .pull-quote-float {
             position: relative;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -126,7 +122,7 @@
             color: rgba(255, 255, 255, 0.45);
         }
 
-        /* Action checklist styled like a to-do list rather than plain bullets */
+        /* Action checklist */
         .action-checklist {
             list-style: none;
             padding: 0;
@@ -156,7 +152,7 @@
             justify-content: center;
         }
 
-        /* "Go to Top" button — HTML/CSS only, no JavaScript */
+        /* "Go to Top" */
         .back-to-top {
             position: fixed;
             right: 1.5rem;
@@ -186,7 +182,7 @@
             margin-top: 2rem;
         }
 
-        /* Sidebar drops above the content and stops sticking on narrow screens */
+        /* Sidebar drops */
         @media (max-width: 820px) {
             .mag-layout {
                 grid-template-columns: 1fr;
@@ -309,9 +305,9 @@
 
                 <section id="whats-changing">
                     <h2>What's Slowly Changing</h2>
-                    <img class="content-img" src="images/content1-apprentice-workshop.jpg"
-                        alt="An experienced craftsperson mentoring a younger apprentice hands-on in a workshop">
-                    <span class="img-caption">Apprenticeship-style mentoring teaches things a classroom structurally can't.</span>
+                    <img class="content-img" src="images/gallery4-craft-workshop.jpg"
+                        alt="A technical instructor demonstrating precision measuring tools on an engine block to a group of vocational students">
+                    <span class="img-caption">Vocational, hands-on instruction teaches things a classroom structurally can't.</span>
                     <p>
                         Vocational training centres and apprenticeship-style programmes have been quietly growing
                         as an alternative track &mdash; places where the entire point is doing the task under
@@ -416,7 +412,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2026 Bright Path &middot; University of Westminster group coursework</span>
+            <span>&copy; 2026 BrightPath &middot; University of Westminster group coursework</span>
             <span>Compliant with JANET regulations</span>
         </div>
     </footer>

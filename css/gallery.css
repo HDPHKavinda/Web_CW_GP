@@ -1,6 +1,4 @@
-/* Gallery Page - page-specific external CSS (Student 1)
-   Extends the Global CSS (style.css) with styling only used on gallery.html.
-   Does not override or redefine any Global CSS rule. */
+/* Gallery Page — page-specific CSS, doesn't override Global CSS */
 
 /* Thumbnail grid */
 .thumb-grid {
@@ -20,7 +18,7 @@
     box-shadow: 0 4px 10px rgba(18, 58, 122, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-/* Toggled by JS (mouseenter/mouseleave/focus/blur), not a plain :hover rule */
+/* Toggled by JS, not a plain :hover rule */
 .thumb.thumb-hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(18, 58, 122, 0.18);

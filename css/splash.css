@@ -1,6 +1,4 @@
-/* Splash Screen (Student 2) — full-screen background photo with a dark gradient
-   overlay so the content stays readable on top of it. Does not use the shared
-   template, but matches the site's agreed visual identity. */
+/* Splash Screen — full-screen photo + dark gradient overlay for readability */
 
 html, body {
     height: 100%;
@@ -27,8 +25,7 @@ html, body {
     z-index: -2;
 }
 
-/* Gradient overlay: solid brand colour behind the text, fading out toward the
-   far side so the photo still reads through, per "use an overlay/contrast" */
+/* Gradient overlay: solid behind text, fades out toward the photo */
 .splash-overlay {
     position: absolute;
     inset: 0;
@@ -139,8 +136,7 @@ html, body {
     color: white;
 }
 
-/* Narrow screens: the text needs the full width, so the overlay goes solid
-   behind it instead of fading toward the photo */
+/* Narrow screens: overlay goes solid, text needs full width */
 @media (max-width: 820px) {
     .splash-content {
         padding: 2.5rem 1.5rem;

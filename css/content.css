@@ -1,7 +1,4 @@
-/* Content-page styling for Student 4 (content_ST4.html). Students 2 and 3 use their
-   own embedded <style> blocks instead of this file. Card-style sections with numbered
-   badges, framed images and a callout quote — simpler than Student 1's bespoke content
-   page, but no longer a bare, unstyled layout. */
+/* Student 4 */
 
 .content-simple-toc {
     display: flex;
@@ -103,8 +100,7 @@
     }
 }
 
-/* Hero: text column + supporting image, so the hero doesn't leave a lopsided
-   empty gap on wide screens */
+/* Hero */
 .st4-hero {
     display: flex;
     align-items: flex-start;
