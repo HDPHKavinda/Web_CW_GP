@@ -15,6 +15,7 @@ together so the team can grab both files at once. It is not part of the live sit
 4. Update the footer's Page Editor / Validation links and student details to your own.
 5. Add `class="active"` to your own page's nav link.
 
-The live copies of `template.html` and `style.css` at the project root are the ones
-actually wired into the working site — this folder exists only so the starting files
-are easy to find and hand out, and edits made here do **not** affect the live site.
+`style.css` at the project root is the one actually wired into the live site — this
+folder exists only so the starting `template.html` is easy to find and hand out.
+`template.html` itself is not a live page (no other page links to it); it's the
+master copy every page's header/nav/footer was originally copied from.
